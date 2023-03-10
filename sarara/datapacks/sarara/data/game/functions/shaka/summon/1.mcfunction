@@ -1,0 +1,1 @@
+summon armor_stand -112 54 0 {Tags:["shaka1","game"],Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:"takus042"}}]}
