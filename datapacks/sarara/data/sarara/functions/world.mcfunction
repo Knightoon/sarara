@@ -126,4 +126,4 @@ fill -117 71 19 -117 66 19 air
 ##射撃場『釈迦コロシ』看板
 setblock -129 52 3 minecraft:dark_oak_sign[rotation=4,waterlogged=false]{Color:"white",GlowingText:1b,Text1:'{"text":""}',Text2:'{"extra":[{"text":"釈迦コロシ"}],"text":""}',Text3:'{"extra":[{"text":"準備中"}],"text":""}',Text4:'{"text":""}'}
 
-say "hage"
+##hage2
