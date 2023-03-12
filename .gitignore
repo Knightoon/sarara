@@ -350,9 +350,10 @@ MigrationBackup/
 .ionide/
 
 # world
-*.dat
-*.lock
-*.dat_old
+level.dat
+session.lock
+level.dat_old
+uid.dat
 /advancements
 /entities
 /playerdata
