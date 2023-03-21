@@ -119,6 +119,34 @@ scoreboard players set cnt2 therminator 0
 # condition = 1 THEN 氷 
 scoreboard players set condition therminator 0
 
+##宝石店着せ替えスタンド
+kill @e[type=armor_stand,tag=kisekae]
+kill @e[type=armor_stand,tag=kisekae_kill]
+summon armor_stand -446 33 -124 {NoGravity:1b,Tags:["kisekae"]}
+setblock -446 32 -124 lodestone
+setblock -446 32 -125 air
+
+###着せ替えスコアボード
+scoreboard objectives add kisekae dummy "着せ替え"
+scoreboard players set on kisekae 0
+scoreboard players set time kisekae 0
+scoreboard players set unlocked kisekae 0
+
+##会話関連
+scoreboard objectives add talk dummy "会話"
+scoreboard objectives add talk_on dummy "会話on"
+scoreboard objectives add talk_time dummy "会話time"
+kill @e[type=villager,tag=bad_1]
+summon villager -450 32 -117 {Silent:1b,Invulnerable:1b,CustomNameVisible:1b,NoAI:1b,Rotation:[-180F,0F],Tags:["bad_1"],CustomName:'{"text":"下っ端A","color":"red","bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false}',VillagerData:{profession:"minecraft:armorer"},Offers:{}}
+scoreboard players set @e[type=villager,tag=bad_1] talk 0
+scoreboard players set @e[type=villager,tag=bad_1] talk_on 0
+scoreboard players set @e[type=villager,tag=bad_1] talk_time 0
+
+
+scoreboard objectives add vtalk minecraft.custom:talked_to_villager "村人会話"
+scoreboard players set @a vtalk 0
+
+
 ###その他
 ##図書室梯子
 fill -117 71 19 -117 66 19 air
@@ -126,4 +154,3 @@ fill -117 71 19 -117 66 19 air
 ##射撃場『釈迦コロシ』看板
 setblock -129 52 3 minecraft:dark_oak_sign[rotation=4,waterlogged=false]{Color:"white",GlowingText:1b,Text1:'{"text":""}',Text2:'{"extra":[{"text":"釈迦コロシ"}],"text":""}',Text3:'{"extra":[{"text":"準備中"}],"text":""}',Text4:'{"text":""}'}
 
-##hage2

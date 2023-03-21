@@ -53,7 +53,6 @@ execute if score time movie1 matches 1001..1020 run execute as @e[tag=movie1] at
 
 ##UFO
 execute if score time movie1 matches 1001 run tellraw @a {"text": "「え...？」","color": "yellow"}
-
 execute if score time movie1 matches 1030 run tellraw @a {"text": "?「やぁ、久しぶり君に会えてとても嬉しいよ。」","color": "yellow"}
 execute if score time movie1 matches 1030 run execute as @a at @s run playsound sarara:s1 master @s ~ ~ ~ 1.0 1.0 1.0
 execute if score time movie1 matches 1200 run tellraw @a [{"text": "?「突然だが、君を私の故郷","color": "yellow"},{"text":"aaaa","obfuscated": true},{"text":"に招待しようと思うんだ。」","color": "yellow"}]

@@ -22,7 +22,7 @@ gamerule randomTickSpeed 0
 gamerule doTileDrops false
 
 #配布前にfalseへ
-gamerule sendCommandFeedback true
+gamerule sendCommandFeedback false
 
 #-------------------------------------------#
 #                   基本設定                 #
@@ -88,3 +88,9 @@ function smoke:tick
 
 #サーミネーター
 function riddle:therminator/tick
+
+#宝石店(着せ替え)
+function riddle:kisekae/tick
+
+#会話
+function talk:tick
