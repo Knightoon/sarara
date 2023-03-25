@@ -29,6 +29,13 @@ scoreboard players set time movie2 0
 scoreboard players set unlocked movie2 0
 scoreboard players set m2_s movie2 0
 
+##宇宙修理後ムービー
+scoreboard objectives add movie3 dummy "ムービー3"
+scoreboard players set on movie3 0
+scoreboard players set time movie3 0
+scoreboard players set unlocked movie3 0
+scoreboard players set m3_s movie3 0
+
 ##部品
 scoreboard objectives add parts dummy "部品"
 scoreboard players set 集めた数 parts 0
@@ -132,20 +139,27 @@ scoreboard players set on kisekae 0
 scoreboard players set time kisekae 0
 scoreboard players set unlocked kisekae 0
 
+##村人召喚
+kill @e[type=villager,tag=bad_1]
+kill @e[type=villager,tag=shop_1]
+summon villager -450 32 -117 {Silent:1b,Invulnerable:1b,CustomNameVisible:1b,NoAI:1b,Rotation:[-180F,0F],Tags:["bad_1"],CustomName:'{"text":"下っ端A","color":"red","bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false}',VillagerData:{profession:"minecraft:armorer"},Offers:{}}
+summon villager -444 32 -139 {Silent:1b,Invulnerable:1b,NoAI:1b,Rotation:[-90F,0F],Tags:["shop_1"],CustomName:'{"text":"カフェ店員","color":"green"}',VillagerData:{profession:"minecraft:shepherd",type:"minecraft:snow"},Offers:{}}
+
+
 ##会話関連
 scoreboard objectives add talk dummy "会話"
 scoreboard objectives add talk_on dummy "会話on"
 scoreboard objectives add talk_time dummy "会話time"
-kill @e[type=villager,tag=bad_1]
-summon villager -450 32 -117 {Silent:1b,Invulnerable:1b,CustomNameVisible:1b,NoAI:1b,Rotation:[-180F,0F],Tags:["bad_1"],CustomName:'{"text":"下っ端A","color":"red","bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false}',VillagerData:{profession:"minecraft:armorer"},Offers:{}}
+
 scoreboard players set @e[type=villager,tag=bad_1] talk 0
 scoreboard players set @e[type=villager,tag=bad_1] talk_on 0
 scoreboard players set @e[type=villager,tag=bad_1] talk_time 0
-
+scoreboard players set @e[type=villager,tag=shop_1] talk 0
+scoreboard players set @e[type=villager,tag=shop_1] talk_on 0
+scoreboard players set @e[type=villager,tag=shop_1] talk_time 0
 
 scoreboard objectives add vtalk minecraft.custom:talked_to_villager "村人会話"
 scoreboard players set @a vtalk 0
-
 
 ###その他
 ##図書室梯子

@@ -22,7 +22,7 @@ gamerule randomTickSpeed 0
 gamerule doTileDrops false
 
 #配布前にfalseへ
-gamerule sendCommandFeedback true
+gamerule sendCommandFeedback false
 
 #-------------------------------------------#
 #                   基本設定                 #
